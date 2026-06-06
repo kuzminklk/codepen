@@ -1,6 +1,6 @@
 
 ### Description 
-Workbook for Codepen study materials
+Workbook for [Codepen](https://codepen.io/) study materials
 
 ### Purpose
 Part of compyter-science study curriculum—availabe in [Notion](https://app.notion.com/p/kuzminklk/31154d4de03580d7b5ceca5b187846be) (private for now)
