@@ -202,17 +202,13 @@ class Sketch extends kokomi.Base {
 				wheelScroller.syncScroll()
 
 				rings.forEach((ring, i) => {
-					ring.rotation.z +=
-						0.0025 * (isOdd(i) ? -1 : 1) * (1 + wheelScroller.scroll.delta) * params.rotateSpeed
+					ring.rotation.z += 0.0025 * (isOdd(i) ? -1 : 1) * (1 + wheelScroller.scroll.delta) * params.rotateSpeed
 				})
 
 				lines.forEach((line) => {
 					line.position.z =
-						-THREE.MathUtils.lerp(
-							0,
-							100,
-							THREE.MathUtils.mapLinear(wheelScroller.scroll.delta, 0, 1000, 0, 1),
-						) + THREE.MathUtils.lerp(10, 0, params.enterProgress)
+						-THREE.MathUtils.lerp(0, 100, THREE.MathUtils.mapLinear(wheelScroller.scroll.delta, 0, 1000, 0, 1)) +
+						THREE.MathUtils.lerp(10, 0, params.enterProgress)
 				})
 
 				this.ce.customPass.material.uniforms.uTransitionProgress.value = params.transitionProgress
